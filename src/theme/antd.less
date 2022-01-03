@@ -1,0 +1,260 @@
+@import (less) './variable.css';
+
+html[data-theme='default'] {
+    @import (less) './antd.default.base.css';
+}
+
+html[data-theme='dark'] {
+    @import (less) './antd.dark.base.css';
+}
+
+.dropdown-menu-base () {
+    backdrop-filter: blur(5px);
+    border-radius: var(--live-border-radius-md);
+    background: var(--live-dropdown-menu-bg);
+    border: 1px solid var(--live-dropdown-border-color);
+}
+
+.modal-buttons () {
+    border-radius: var(--live-height-base);
+    padding: var(--live-padding-xs) var(--live-padding-lg);
+}
+
+html[data-theme='dark'],
+html[data-theme='default'] {
+    // button
+    .live-btn {
+        line-height: 1;
+        align-items: center;
+        font-size: var(--live-font-size-lg);
+
+        &-lg {
+            font-size: 18px;
+        }
+
+        &-sm {
+            font-size: var(--live-font-size-base);
+        }
+    }
+    .live-btn[disabled],
+    .live-btn[disabled]:active,
+    .live-btn[disabled]:focus,
+    .live-btn[disabled]:hover {
+        border-color: var(--live-disabled-color);
+    }
+    // menu
+    .live-menu.live-menu-inline {
+        padding: 10px;
+        border-radius: var(--live-border-radius-lg);
+        border-right: 0;
+
+        .live-menu-item {
+            border-radius: var(--live-border-radius-base);
+        }
+
+        .live-menu-submenu-title {
+            border-radius: var(--live-border-radius-base);
+        }
+    }
+
+    // dropdown
+    .live-dropdown-menu:not(.live-dropdown-menu-submenu-popup) {
+        .dropdown-menu-base();
+        padding: 10px;
+    }
+
+    .live-dropdown {
+        &-menu {
+            border-radius: var(--live-border-radius-md);
+
+            &-item,
+            &-submenu-title {
+                border-radius: var(--live-border-radius-base);
+            }
+
+            .live-dropdown-menu-item:not(.live-dropdown-menu-item-disabled),
+            .live-dropdown-submenu-item:not(.live-dropdown-menu-item-disabled) {
+                color: var(--live-heading-color);
+                border-radius: var(--live-border-radius-base);
+            }
+
+            &-title-content {
+                text-align: center;
+            }
+        }
+    }
+
+    // checkbox
+    .live-checkbox {
+        &-inner {
+            border-radius: 50%;
+        }
+
+        &-checked {
+            &::after {
+                border-radius: 50%;
+            }
+        }
+    }
+
+    // cascader
+    .live-cascader {
+        &-menu {
+            border-right-width: 0;
+            padding-right: 10px;
+
+            &:last-child {
+                padding-right: 0;
+            }
+
+            &-item {
+                border-radius: var(--live-border-radius-base);
+
+                &:not(.live-cascader-menu-item-disabled) {
+                    color: var(--live-heading-color);
+                }
+
+                &-active:not(.live-cascader-menu-item-disabled) {
+                    &,
+                    &:hover {
+                        color: var(--live-heading-color);
+                        font-weight: normal;
+                    }
+                }
+            }
+        }
+    }
+
+    // modal
+    .live-modal {
+        &-header {
+            border: none;
+            border-radius: var(--live-border-radius-md) var(--live-border-radius-md) 0 0;
+        }
+
+        &-content {
+            border-radius: var(--live-border-radius-md);
+        }
+
+        &-footer {
+            border: none;
+
+            .live-btn {
+                .modal-buttons();
+            }
+        }
+
+        &-confirm-btns {
+            .live-btn {
+                .modal-buttons();
+            }
+        }
+    }
+
+    // notification
+    .live-notification-notice {
+        border-radius: var(--live-border-radius-md);
+    }
+
+    // popover
+    .live-popover {
+        &-inner {
+            border-radius: var(--live-border-radius-md);
+        }
+    }
+
+    // pagination
+    .live-pagination {
+        &-item {
+            &-active {
+                a {
+                    color: #fff; // 背景主题色，使用白色
+                }
+
+                &:hover {
+                    a {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    // select
+    .live-select {
+        &-dropdown {
+            .dropdown-menu-base();
+            padding: 10px;
+        }
+
+        &-item {
+            &:not(.live-select-item-option-disabled) {
+                border-radius: var(--live-border-radius-base);
+                color: var(--live-heading-color);
+            }
+
+            &-option-selected:not(.live-select-item-option-disabled) {
+                font-weight: normal;
+                color: var(--live-heading-color);
+                background: var(--live-body-background);
+            }
+        }
+
+        &-multiple {
+            .live-select-selection-item-remove {
+                color: var(--live-text-color-secondary);
+            }
+        }
+    }
+
+    .live-picker {
+        &-panel {
+            border: none;
+
+            &-container {
+                .dropdown-menu-base();
+            }
+
+            .live-picker-header {
+                border-bottom: 1px solid var(--live-dropdown-border-color);
+            }
+
+            .live-picker-footer {
+                border-top: 1px solid var(--live-dropdown-border-color);
+            }
+        }
+
+        &-header {
+            > button {
+                color: var(--live-picker-header-color);
+
+                &:hover {
+                    color: var(--live-picker-header-color);
+                }
+            }
+        }
+    }
+
+    .live-popover,
+    .live-tooltip {
+        &-inner {
+            .dropdown-menu-base();
+            border: none;
+        }
+
+        &-arrow {
+            &-content {
+                .dropdown-menu-base();
+                border-radius: 0;
+                border: none;
+                z-index: 1;
+            }
+        }
+
+        &-buttons {
+            .live-btn {
+                .modal-buttons();
+            }
+        }
+    }
+}

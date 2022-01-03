@@ -1,0 +1,58 @@
+:root {
+    --live-border-radius-base: 6px;
+    --live-border-radius-md: 12px;
+    --live-border-radius-lg: 18px;
+    --live-card-radius: 18px;
+    --live-card-border-radius: 18px;
+    --live-card-padding-base: 18px;
+    --live-padding-lg: 18px;
+    --live-padding-md: 12px;
+    --live-padding-sm: 6px;
+    --live-padding-xs: 6px;
+    --live-padding-xss: 4px;
+    --live-margin-lg: 18px;
+    --live-margin-md: 12px;
+    --live-margin-sm: 6px;
+    --live-margin-xs: 6px;
+    --live-margin-xss: 4px;
+    --live-height-base: 36px;
+    --live-height-lg: 42px;
+    --live-height-sm: 28px;
+    --live-font-size-base: 14px;
+    --live-font-size-lg: 16px;
+    --live-font-size-sm: 12px;
+}
+
+html[data-theme='default']:root {
+    --live-primary-color: #ff0040;
+    --live-body-background: #efefef;
+    --live-heading-color: #333;
+    --live-text-color: #666;
+    --live-text-color-secondary: #999;
+    --live-border-color-base: #666;
+    --live-card-background: #fff;
+    --live-card-inner-background: #efefef;
+    --live-disabled-color: #c0c0c0;
+    --live-input-bg: #ededed;
+    --live-dropdown-menu-bg: rgba(222, 222, 222, 0.9);
+    --live-picker-header-color: rgba(0, 0, 0, 0.65);
+    --live-dropdown-border-color: #d9d9d9;
+    --live-list-n-bg: #f7f7f7;
+}
+
+html[data-theme='dark']:root {
+    --live-primary-color: #ff0040;
+    --live-body-background: #000;
+    --live-heading-color: #fff;
+    --live-text-color: #999;
+    --live-text-color-secondary: #808080;
+    --live-border-color-base: #999;
+    --live-card-background: #212126;
+    --live-card-inner-background: #131415;
+    --live-disabled-color: #595959;
+    --live-input-bg: #353535;
+    --live-dropdown-menu-bg: rgba(60, 60, 69, 0.9);
+    --live-picker-header-color: #bfbfbf;
+    --live-dropdown-border-color: #333;
+    --live-list-n-bg: #2e2e35;
+}

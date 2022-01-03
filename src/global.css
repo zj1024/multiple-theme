@@ -1,0 +1,7 @@
+body {
+  transition: all 0.3s;
+}
+
+.m-b-20 {
+  margin-bottom: 20px;
+}
