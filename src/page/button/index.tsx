@@ -122,7 +122,10 @@ export default () => {
           </Button>
         </Space>
       </section>
-      <section className="m-b-20">
+      <section
+        className="m-b-20"
+        style={{ background: "#bec8c8", padding: 20 }}
+      >
         <Space>
           <Button ghost>Ghost</Button>
           <Button ghost disabled>
